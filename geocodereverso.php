@@ -25,13 +25,13 @@ function obterEndereco($latitude, $longitude, $chaveAPI) {
     }
 }
 
-// Verifica se a requisição é do tipo POST
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtém o corpo da requisição POST
+
     $postData = file_get_contents('php://input');
     $dados = json_decode($postData, true);
 
-    // Obtém a latitude e longitude do corpo da requisição
+ 
     $latitude = $dados['latitude'] ?? null;
     $longitude = $dados['longitude'] ?? null;
     $chaveAPI = 'CHAVE_API';
